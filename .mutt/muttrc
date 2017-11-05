@@ -1,0 +1,10 @@
+macro index <F5> '<sync-mailbox><enter-command>source ~/.mutt/account.fer<enter><change-folder>!<enter>'
+macro index <F6> '<sync-mailbox><enter-command>source ~/.mutt/account.gmail<enter><change-folder>!<enter>'
+
+set move=no
+set imap_keepalive=900
+
+folder-hook 'account.fer' 'source ~/.mutt/account.fer'
+folder-hook 'account.gmail' 'source ~/.mutt/account.gmail'
+
+source '~/.mutt/account.fer'

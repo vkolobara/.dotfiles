@@ -1,0 +1,23 @@
+source "gpg -dq $HOME/.password.gpg |"
+
+color status cyan default
+set imap_user=vk47567@fer.hr
+set imap_pass=$my_pwd_fer
+set folder=imaps://outlook.office365.com
+set spoolfile=+INBOX
+set beep_new=yes
+
+set realname="Vinko Kolobara"
+set smtp_url=smtp://vk47567@fer.hr@outlook.office365.com:587/
+set ssl_force_tls=yes
+set smtp_authenticators="login"
+set record=+sent
+
+unset imap_passive
+
+set imap_keepalive = 300
+set mail_check = 300
+
+set header_cache = ~/.mutt/fer/cache/headers
+set message_cachedir = ~/.mutt/fer/cache/bodies
+set certificate_file = ~/.mutt/fer/certificates
