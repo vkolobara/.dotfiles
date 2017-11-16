@@ -31,13 +31,13 @@ status.register("temp",
 # This would look like this:
 # Discharging 6h:51m
 status.register("battery",
-        format="{status} {remaining:%E%hh:%Mm} {percentage:.2f}% {consumption}W",
+        format="{status} {remaining:%E%hh:%Mm} {percentage:.2f}%",
     alert=True,
     alert_percentage=5,
     status={
-        "DIS":  "Discharging",
-        "CHR":  "Charging",
-        "FULL": "Bat full",
+        "DIS":  "D",
+        "CHR":  "C",
+        "FULL": "F",
     },)
 
 # Displays whether a DHCP client is running
@@ -58,17 +58,18 @@ status.register("network",
 # Shows disk usage of /
 # Format:
 # 42/128G [86G]
-status.register("disk",
-    path="/",
-    format="{used}/{total}G [{avail}G]",)
+#status.register("disk",
+#    path="/",
+#    format="{used}/{total}G [{avail}G]",)
 
 # Shows pulseaudio default sink volume
 #
 # Note: requires libpulseaudio from PyPI
 status.register("alsa",
-    format="♪{volume}",)
+    format="♪{volume}",
+    format_muted="(M) ♪{volume}")
 
 status.register("window_title", 
-    max_width=30)
+    max_width=100)
 
 status.run()

@@ -1,2 +1,4 @@
 fer
 gmail
+*.lock
+*.db
