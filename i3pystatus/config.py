@@ -69,6 +69,10 @@ status.register("alsa",
     format="♪{volume}",
     format_muted="(M) ♪{volume}")
 
+status.register("mem",
+        format="RAM: {used_mem}/{total_mem} MiB",
+        color="#FFFFFF")
+
 status.register("window_title", 
     max_width=100)
 
