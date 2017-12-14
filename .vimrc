@@ -41,7 +41,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 
-
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
