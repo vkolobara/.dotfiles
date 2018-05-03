@@ -3,6 +3,15 @@ set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set clipboard=unnamedplus
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=79
+set expandtab
+set autoindent
+set fileformat=unix
+set hls
 
 
 " set the runtime path to include Vundle and initialize
@@ -24,6 +33,10 @@ Plugin 'tpope/vim-commentary'
 Plugin 'eagletmt/neco-ghc'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-latex/vim-latex'
+Plugin 'artur-shaik/vim-javacomplete2'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -56,3 +69,6 @@ let g:airline_symbols.linenr = ''
 "let g:airline_symbols.maxlinenr = ''
 
 let g:airline_theme = 'powerlineish'
+
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+

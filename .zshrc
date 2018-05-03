@@ -89,3 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 eval $(thefuck --alias)
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/vkolobara/.sdkman"
+[[ -s "/home/vkolobara/.sdkman/bin/sdkman-init.sh" ]] && source "/home/vkolobara/.sdkman/bin/sdkman-init.sh"

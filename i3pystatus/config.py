@@ -2,7 +2,6 @@ from i3pystatus import Status
 
 status = Status()
 
-
 # Displays clock like this:
 # Tue 30 Jul 11:59:46 PM KW31
 #                          ^-- calendar week
@@ -73,7 +72,9 @@ status.register("mem",
         format="RAM: {used_mem}/{total_mem} MiB",
         color="#FFFFFF")
 
-status.register("window_title", 
-    max_width=100)
+status.register("external_ip", 
+        format="{country_code} {ip}")
+
+status.register("redshift")
 
 status.run()
