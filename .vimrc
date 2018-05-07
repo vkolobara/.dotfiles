@@ -12,6 +12,11 @@ set expandtab
 set autoindent
 set fileformat=unix
 set hls
+set wildmenu
+set wildmode=full
+set history=200
+set incsearch
+runtime macros/matchit.vim
 
 
 " set the runtime path to include Vundle and initialize
