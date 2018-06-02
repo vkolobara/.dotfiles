@@ -6,11 +6,18 @@ status = Status()
 # Tue 30 Jul 11:59:46 PM KW31
 #                          ^-- calendar week
 status.register("clock",
-        format="%d/%m/%Y %H:%M:%S",)
+        format="%H:%M:%S",)
+
+status.register("weekcal",
+        suffixformat = "%B %Y")
 
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)
-status.register("load")
+# status.register("load")
+
+# Displays keyboard layout
+status.register("xkblayout",
+    layouts=["us", "hr"])
 
 # Shows your CPU temperature, if you have a Intel CPU
 status.register("temp",
@@ -72,9 +79,7 @@ status.register("mem",
         format="RAM: {used_mem}/{total_mem} MiB",
         color="#FFFFFF")
 
-status.register("external_ip", 
-        format="{country_code} {ip}")
-
-status.register("redshift")
+# status.register("window_title")
+# status.register("redshift")
 
 status.run()
