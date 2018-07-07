@@ -1,43 +1,44 @@
 ! special
-*.foreground:   #c5c8c6
-*.background:   #1d1f21
-*.cursorColor:  #c5c8c6
+*.foreground:   #d2c5bc
+*.background:   #000000
+*.cursorColor:  #d2c5bc
 
 ! black
-*.color0:       #1d1f21
-*.color8:       #969896
+*.color0:       #202020
+*.color8:       #606060
 
 ! red
-*.color1:       #cc342b
-*.color9:       #cc342b
+*.color1:       #b91e2e
+*.color9:       #d14548
 
 ! green
-*.color2:       #198844
-*.color10:      #198844
+*.color2:       #81957c
+*.color10:      #a7b79a
 
 ! yellow
-*.color3:       #fba922
-*.color11:      #fba922
+*.color3:       #f9bb80
+*.color11:      #fae3a0
 
 ! blue
-*.color4:       #3971ed
-*.color12:      #3971ed
+*.color4:       #356579
+*.color12:      #7491a1
 
 ! magenta
-*.color5:       #a36ac7
-*.color13:      #a36ac7
+*.color5:       #2d2031
+*.color13:      #87314e
 
 ! cyan
-*.color6:       #3971ed
-*.color14:      #3971ed
+*.color6:       #0b3452
+*.color14:      #0f829d
 
 ! white
-*.color7:       #c5c8c6
-*.color15:      #ffffff
+*.color7:       #909090
+*.color15:      #fff0f0
+
 
 rofi.color-enabled: true
-rofi.color-window: #1d1f21, #c5c8c6
-rofi.color-normal: #1d1f21, #c5c8c6, #1d1f21, #1d1f21, #3971ed
+rofi.color-window: #000000, #d2c5bc
+rofi.color-normal: #000000, #d2c5bc, #000000, #000000, #0b3452
 
 URxvt.font:		xft:Inconsolata\ for\ Powerline:pixelsize=21, xft:DejaVu\ Sans\ Mono\ for\ Powerline:pixelsize=21
 

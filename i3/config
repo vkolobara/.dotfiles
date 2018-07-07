@@ -105,11 +105,11 @@ bindsym XF86AudioMute exec --no-startup-id amixer -q sset Master toggle
 bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 10 # increase screen brightness
 
-new_window pixel 1
+new_window pixel 0
 
-gaps inner 5
-smart_gaps on
-smart_borders on
+gaps inner 15
+gaps outer 3
+hide_edge_borders both
 
 set $ws1 "1: term"
 set $ws2 "2: dev"
@@ -224,9 +224,3 @@ bar {
 
 	}
 }
-
-assign [class="Thunderbird"] $ws5
-assign [class="Chromium"] $ws3
-assign [class="qutebrowser"] $ws3
-assign [class="Viber"] $ws6
-assign [class="subl3"] $ws2
