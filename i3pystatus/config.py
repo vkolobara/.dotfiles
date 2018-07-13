@@ -6,10 +6,10 @@ status = Status()
 # Tue 30 Jul 11:59:46 PM KW31
 #                          ^-- calendar week
 status.register("clock",
-        format="%H:%M:%S",)
+        format="%H:%M:%S %d/%m/%y",)
 
-status.register("weekcal",
-        suffixformat = "%B %Y")
+#status.register("weekcal",
+#        suffixformat = "%B %Y")
 
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)
@@ -81,5 +81,9 @@ status.register("mem",
 
 # status.register("window_title")
 # status.register("redshift")
+
+status.register("now_playing",
+                format="{artist} - {title} {status}")
+
 
 status.run()

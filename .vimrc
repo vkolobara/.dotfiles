@@ -2,6 +2,7 @@ set encoding=utf-8
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
+
 set clipboard=unnamedplus
 set shiftwidth=4
 set tabstop=4
@@ -16,11 +17,6 @@ set wildmenu
 set wildmode=full
 set history=200
 set incsearch
-runtime macros/matchit.vim
-
-:let Tex_FoldedSections=""
-:let Tex_FoldedEnvironments=""
-:let Tex_FoldedMisc=""
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -30,19 +26,16 @@ let g:ycm_server_python_interpreter = '/usr/bin/python2'
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
-Plugin 'raimondi/delimitmate'
-Plugin 'tpope/vim-commentary'
 Plugin 'eagletmt/neco-ghc'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-latex/vim-latex'
-Plugin 'artur-shaik/vim-javacomplete2'
-Plugin 'vim-scripts/indentpython.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-commentary'
+Plugin 'raimondi/delimitmate'
+Plugin 'yggdroot/indentline'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -54,11 +47,12 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -76,5 +70,6 @@ let g:airline_symbols.linenr = ''
 
 let g:airline_theme = 'powerlineish'
 
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
