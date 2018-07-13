@@ -214,13 +214,13 @@ bar {
 
 	colors {
 		background $background
-		statusline $foreground
-		separator  $color8
+		statusline $color6
+		separator  $color6
 
-		focused_workspace	$background	$background	$foreground
-		active_workspace	$background	$background	$foreground
-		inactive_workspace	$background	$background	$color8
-		urgent_workspace	$background	$background	$color1	  
+		focused_workspace	$background	$background	$color6
+		active_workspace	$background	$background	$color6
+		inactive_workspace	$background	$background	$color14
+		urgent_workspace	$background	$background	$color19  
 
 	}
 }
