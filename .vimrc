@@ -8,7 +8,6 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set textwidth=79
 set expandtab
 set autoindent
 set fileformat=unix
@@ -36,11 +35,12 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-commentary'
 Plugin 'raimondi/delimitmate'
 Plugin 'yggdroot/indentline'
+Plugin 'Shougo/vimproc.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 syntax on
-set number
+set relativenumber
 set omnifunc=syntaxcomplete#Complete
 
 set statusline+=%#warningmsg#
@@ -72,4 +72,10 @@ let g:airline_theme = 'powerlineish'
 
 let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
+let g:ycm_autoclose_preview_window_after_completion=1
+
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
+let g:haskellmode_completion_ghc=0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+let g:necoghc_use_stack=1
+let g:necoghc_enable_detailed_browse=1
