@@ -36,6 +36,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'raimondi/delimitmate'
 Plugin 'yggdroot/indentline'
 Plugin 'Shougo/vimproc.vim'
+Plugin 'eagletmt/ghcmod-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
