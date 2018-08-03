@@ -144,6 +144,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 
 exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-scale /home/vkolobara/Pictures/arch.jpg
+exec_always compton
 
 # Colors set from ~/.Xresources
 set_from_resource	$background	background

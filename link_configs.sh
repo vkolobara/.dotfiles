@@ -10,3 +10,4 @@ ln -sf ~/.dotfiles/.vimrc ~/.vimrc
 ln -sf ~/.dotfiles/.zshrc ~/.zshrc
 ln -sf ~/.dotfiles/.password.gpg ~/.password.gpg
 ln -sf ~/.dotfiles/.Xdefaults ~/.Xdefaults
+ln -sf ~/.dotfiles/.compton.conf ~/.config/compton.conf

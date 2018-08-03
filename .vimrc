@@ -28,7 +28,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
-Plugin 'eagletmt/neco-ghc'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Valloric/YouCompleteMe'
@@ -36,7 +35,6 @@ Plugin 'tpope/vim-commentary'
 Plugin 'raimondi/delimitmate'
 Plugin 'yggdroot/indentline'
 Plugin 'Shougo/vimproc.vim'
-Plugin 'eagletmt/ghcmod-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -60,23 +58,17 @@ if !exists('g:airline_symbols')
 endif
 
 let g:airline_powerline_fonts = 1
-"let g:airline_left_sep = ''
-"let g:airline_left_alt_sep = ''
-"let g:airline_right_sep = ''
-"let g:airline_right_alt_sep = ''
-"let g:airline_symbols.branch = ''
-"let g:airline_symbols.readonly = ''
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
-"let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.maxlinenr = ''
 
 let g:airline_theme = 'powerlineish'
 
 let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
 let g:ycm_autoclose_preview_window_after_completion=1
-
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
-let g:haskellmode_completion_ghc=0
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-let g:necoghc_use_stack=1
-let g:necoghc_enable_detailed_browse=1
