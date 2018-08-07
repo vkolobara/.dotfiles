@@ -219,9 +219,12 @@ bindsym $mod+m focus floating; mode "move"
 bindsym $mod+r mode "resize"
 
 bar {
-  status_command python ~/.config/i3pystatus/config.py
+    status_command python ~/.config/i3pystatus/config.py
 	position top
 	strip_workspace_numbers no
+    bindsym button1 nop
+    separator_symbol " | "
+
 
 	colors {
 		background $background
@@ -232,6 +235,5 @@ bar {
 		active_workspace	$color0 $color0 $color6
 		inactive_workspace	$background	$background	$color14
 		urgent_workspace	$background	$background	$color19  
-
 	}
 }
